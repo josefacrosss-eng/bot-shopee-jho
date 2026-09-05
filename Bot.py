@@ -1,7 +1,12 @@
-import requests, urllib.parse
-PHONE = "5541995667304"
-APIKEY = "2658217"
-AF_ID = "18304170585"
-msg = "Bom dia Jho! TOP 3 hoje: 1) Calcinha R$17,98 https://shopee.com.br/search?keyword=calcinha&af_id=18304170585 2) Sutia https://shopee.com.br/search?keyword=sutia&af_id=18304170585 3) VS https://shopee.com.br/search?keyword=victoria&af_id=18304170585"
-url = f"https://api.callmebot.com/whatsapp.php?phone={PHONE}&text={urllib.parse.quote(msg)}&apikey={APIKEY}"
-requests.get(url)
+import requests
+import urllib.parse
+
+phone = "554195667304"
+apikey = "2658217"
+
+mensagem = "🤖 *BOT SHOPEE ATIVADO COM SUCESSO!* 🎉\n\nJho, seu robô está funcionando 100%! Todo dia às 8h você vai receber as melhores promoções da Shopee aqui no seu 41 99566-7304 💚"
+
+url = f"https://api.callmebot.com/whatsapp.php?phone={phone}&text={urllib.parse.quote(mensagem)}&apikey={apikey}"
+
+r = requests.get(url)
+print(r.text)
